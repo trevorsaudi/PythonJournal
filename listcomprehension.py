@@ -53,5 +53,30 @@ print (my_list4)
 
 
 #list comprehension for the above
+letter = 'abcd'
 my_list4 = [(letter,nums) for (letter,nums) in (zip(letter,nums)) ]
 print(my_list4)
+
+#dictionary comrpehension
+names = ['Bruce','Clark','Peter','Logan', 'Wade']
+heroes = ['Batman','Superman','Spiderman','Wolverine','Deadpool']
+
+for names,heroes in zip(names,heroes):
+    print (names,heroes)
+
+#rewriting the above using dictionaries
+names = ['Bruce','Clark','Peter','Logan', 'Wade']
+heroes = ['Batman','Superman','Spiderman','Wolverine','Deadpool']
+
+dict_heroes = {}
+for names,heroes in zip(names,heroes):
+    dict_heroes[names] = heroes
+print (dict_heroes)
+
+#using dictionary comprehension
+names = ['Bruce','Clark','Peter','Logan', 'Wade']
+heroes = ['Batman','Superman','Spiderman','Wolverine','Deadpool']
+
+my_dict = {names:heroes for names,heroes in zip(names,heroes)}
+
+print(my_dict)
